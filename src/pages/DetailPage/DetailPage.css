@@ -1,0 +1,74 @@
+.detail_section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 배경 스타일 */
+.detail_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: 0;
+}
+.detail_background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 어두운 오버레이 */
+  z-index: 1;
+}
+
+/* 내용 스타일 */
+.detail_content {
+  position: relative;
+  width: 40%;
+  color: white;
+  padding: 0 80px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.detail_title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f9f9f9;
+}
+.detail_runtime, 
+.detail_vote_average, 
+.detail_release_date {
+  font-size: 1.1rem;
+  margin-right: 15px;
+  color: #ccc;
+}
+.detail_overview {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e1e1e1;
+  margin-top: 20px;
+}
+
+/* 포스터 스타일 */
+.detail_poster {
+  z-index: 2;
+  margin-top: 150px;
+  padding: 0 80px;
+}
+.detail_poster img {
+  width: 400px; 
+  border-radius: 10px;
+}
